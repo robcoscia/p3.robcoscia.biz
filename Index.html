@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>High Card</title>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+						
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/css/HighCard.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	</head>
+	
+	<body>	
+		<div id = "MainWindow">
+			<center><h1>Highest Card</h1></center>
+			<br>
+			<div id="ScoreBoard">
+				<div id="Player1ScoreDiv">
+					<label> Player 1:</label>
+					<span id="Player1Score">0</span>
+				</div>
+				<div id="Player2ScoreDiv">
+					<label> Player 2:</label>
+					<span id="Player2Score">0</span>
+				</div>
+			</div>
+			<center><img id="FunctionButton" src="/images/button-startgame.jpg"></center>
+			<br>
+			<div id="CardTable">
+				<div id="ControlsDiv">
+					<div id="Player1PickDiv" class="PlayersPick">
+						<img id="Player1WinningHand" class="WinningHandImg" src="/images/winnerStars.jpg" />
+						<br>
+						<img id="Player1Pick" />
+					</div>
+					<div id="ShuffleArea">
+						<p>Click to shuffle cards.</p>
+						<br>
+						<img id="CardBack" src="/images/cardback.jpg" />
+					</div>
+					<div id="Player2PickDiv" class="PlayersPick">
+						<img id="Player2WinningHand" class="WinningHandImg" src="/images/winnerStars.jpg" />
+						<br>
+						<img id="Player2Pick" />
+					</div>	
+				</div>
+			</div>
+			<br>
+		</div>
+		<script src="/js/HighCard.js"></script>
+	</body>
+</html>
+
+

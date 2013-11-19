@@ -1,0 +1,110 @@
+#ScoreBoard{
+	width: 80%;
+	height: 25px;
+	margin-right: 10%;
+	margin-left: 10%;
+	min-width: 1000px;
+}
+
+#Player1ScoreDiv{
+	position: absolute;
+	margin-left: 80px;
+}
+
+#Player2ScoreDiv{
+	position: absolute;
+	margin-left: 750px;	
+}
+
+#FunctionButton{
+	margin-top: 1px;
+	visibility: visible;
+	cursor:pointer;	
+	width: 200px;
+	height: 75px;
+}
+
+#CardTable{
+	background-image: url('../images/cardtabletop.jpg');
+	background-color: #cccccc;
+	border-bottom-left-radius: 35%;
+	border-bottom-right-radius: 35%;
+	width: 80%;
+	height: 500px;
+	margin-right: 5%;
+	margin-left: 5%;
+	min-width: 1000px;
+}
+
+#CardBack{
+	width: 151px;
+	height: 212px;
+	float: left;
+	float:left;
+	padding-right:25px;
+}
+
+.CardsOnTable{
+	position:absolute;
+	cursor:pointer;	
+	width: 151px;
+	height: 180px;
+}
+
+#ControlsDiv{
+	position: absolute;
+	margin-top: 16%;
+	width: 100%;
+	visibility: hidden;
+}
+
+#ShuffleArea{
+	position: absolute;
+	width: 220px;
+	margin-left: 440px;
+}
+
+.PlayersPick{
+	width: 220px;
+	height: 350px;
+	visibility:hidden;
+}
+
+#Player1PickDiv{
+	position: absolute;
+	margin-left: 130px;
+}
+
+#Player2PickDiv{
+	position: absolute;
+	margin-left: 740px;	
+}
+
+#Player1Pick{
+	margin-top: 30px;
+	width: 151px;
+	height: 212px;	
+}
+
+#Player2Pick{
+	margin-top: 30px;
+	width: 151px;
+	height: 212px;	
+}
+
+#Player1WinningHand{
+	position: absolute;
+	visibility: hidden;
+	margin-left: 15%;
+}
+
+#Player2WinningHand{
+	position: absolute;
+	visibility: hidden;
+	margin-left: 15%;
+}
+
+.WinningHandImg{
+	width: 80px;
+	height: 45px;
+}
