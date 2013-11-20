@@ -55,6 +55,8 @@ cardImages[52] = ["as.png", "14"];
 var playerCardVal = [0, 0];
 var playerScore = [0,0];
 var playerIndex = 0;
+var NEXT_BUTTON_SRC = "/images/1mn_next_button.jpg";
+var START_BUTTON_SRC = "/images/button-startgame.jpg";
 
 function GetCardValue(cardId) {
 	return parseInt(cardImages[parseInt(cardId, 10)][1], 10);
@@ -85,6 +87,7 @@ function SetCardPositionArray(response) {
 /*   Event Handlers   */
 
 $('#CardBack').click(function() {
+	$('#ShuffleArea').css('visibility', 'hidden');
 	var topPos = 255;
 	var leftPos = 115;
 	for (var i = 1; i < 53; i++) {
@@ -106,8 +109,12 @@ $('#CardTable').on('click', '.CardsOnTable', function() {
 	var cardIndex = parseInt($(this).attr('id').slice(4), 10);
 	playerCardVal[playerIndex] = GetCardValue(cardIndex);
 	if (playerIndex === 0) {
+		$('#ShuffleArea').css('visibility', 'visible');
 		$('#Player1Pick').attr('src', "/images/" + GetCardImageNm(cardIndex));
 		$('#Player1Pick').css('visibility', 'visible');
+		$('#PointPlayer1').css('visibility', 'hidden');
+		$('#PointPlayer2').css('visibility', 'visible');
+
 		playerIndex = 1;
 	} else {
 		$('#Player2Pick').attr('src', "/images/" + GetCardImageNm(cardIndex));
@@ -122,17 +129,32 @@ $('#CardTable').on('click', '.CardsOnTable', function() {
 			$('#Player2WinningHand').css('visibility', 'visible');		
 			$(Player2Score).html(playerScore[1].toString());		
 		} else {
+			// Do nothing
+		}
+		if(playerScore[0] >= 100)
+		{
+			$('#TrophyPlayer1').css('display', 'block');
+			$('#FunctionButton').attr('src', START_BUTTON_SRC);
+			
+		} else if(playerScore[1] >= 100){
+			$('#TrophyPlayer2').css('display', 'block');
+			$('#FunctionButton').attr('src', START_BUTTON_SRC);			
 		}
 		$('#ShuffleArea').css('visibility', 'hidden');
+		$('#PointPlayer2').css('visibility', 'hidden');
 		$('#FunctionButton').css('visibility', 'visible');
 	}
 	$('.CardsOnTable').remove();
 });
 
 $('#MainWindow').on('click', '#FunctionButton', function() {
-	$('#FunctionButton').attr('src', '/images/1mn_next_button.jpg');
-	$('#FunctionButton').css('visibility', 'hidden');
+	if($('#FunctionButton').attr('src') === START_BUTTON_SRC)
+	{
+		$('#FunctionButton').attr('src', NEXT_BUTTON_SRC);
+		$('#FunctionButton').css('visibility', 'hidden');
+	}
 	
+	$('#PointPlayer1').css('visibility', 'visible');
 	$('#ShuffleArea').css('visibility', 'visible');
 	$('#Player1WinningHand').css('visibility', 'hidden');
 	$('#Player2WinningHand').css('visibility', 'hidden');

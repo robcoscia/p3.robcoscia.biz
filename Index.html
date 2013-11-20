@@ -14,8 +14,7 @@
 	
 	<body>	
 		<div id = "MainWindow">
-			<center><h1>Highest Card</h1></center>
-			<br>
+			<center><h1>High Card</h1></center>
 			<div id="ScoreBoard">
 				<div id="Player1ScoreDiv">
 					<label> Player 1:</label>
@@ -25,23 +24,28 @@
 					<label> Player 2:</label>
 					<span id="Player2Score">0</span>
 				</div>
+				<br>
+				<img id="PointPlayer1" src="/images/Green_Arrow_Right.png" />
+				<img id="PointPlayer2" src="/images/Green_Arrow_Right.png" />
 			</div>
+			<img id="TrophyPlayer1" src="/images/winnerTrophy.jpg" />
+			<img id="TrophyPlayer2" src="/images/winnerTrophy.jpg" />
 			<center><img id="FunctionButton" src="/images/button-startgame.jpg"></center>
 			<br>
 			<div id="CardTable">
 				<div id="ControlsDiv">
 					<div id="Player1PickDiv" class="PlayersPick">
-						<img id="Player1WinningHand" class="WinningHandImg" src="/images/winnerStars.jpg" />
+						<img id="Player1WinningHand" class="WinningHandImg" src="/images/HighCardImage.jpg" />
 						<br>
 						<img id="Player1Pick" />
 					</div>
 					<div id="ShuffleArea">
-						<p>Click to shuffle cards.</p>
+						<div id="ShufflePrompt">Click to shuffle cards.</div>
 						<br>
 						<img id="CardBack" src="/images/cardback.jpg" />
 					</div>
 					<div id="Player2PickDiv" class="PlayersPick">
-						<img id="Player2WinningHand" class="WinningHandImg" src="/images/winnerStars.jpg" />
+						<img id="Player2WinningHand" class="WinningHandImg" src="/images/HighCardImage.jpg" />
 						<br>
 						<img id="Player2Pick" />
 					</div>	
