@@ -1,153 +1,152 @@
-#TrophyPlayer1{
-	width: 181px;
-	height: 104px;
-	margin-left: 169px;
-	display: none;
-}
-
-#TrophyPlayer2{
-	width: 181px;
-	height: 104px;
-	margin-left: 840px;
+#TrophyPlayer1 {
+	width:181px;
+	height:104px;
+	margin-left:169px;
 	display:none;
 }
 
-#ScoreBoard{
-	width: 80%;
-	height: 25px;
-	margin-right: 10%;
-	margin-left: 10%;
-	min-width: 1000px;
+#TrophyPlayer2 {
+	width:181px;
+	height:104px;
+	margin-left:840px;
+	display:none;
 }
 
-#Player1ScoreDiv{
-	position: absolute;
-	margin-left: 80px;
-	padding-left: 2px;
-	width: 125px;
-	height: 20px;
-	background-color: #895f02;
-	color:yellow;
+#ScoreBoard {
+	width:80%;
+	height:25px;
+	margin-right:10%;
+	margin-left:10%;
+	min-width:1000px;
 }
 
-#PointPlayer1{
-	visibility: hidden;
-	width: 50px;
-	height: 50px;
+#Player1ScoreDiv {
+	position:absolute;
+	margin-left:80px;
+	padding-left:2px;
+	width:125px;
+	height:20px;
+	background-color:#895f02;
+	color:#ff0;
 }
 
-#Player2ScoreDiv{
-	position: absolute;
-	margin-left: 750px;	
-	padding-left: 2px;
-	width: 125px;
-	height: 20px;
-	background-color: #895f02;
-	color:yellow;
+#PointPlayer1 {
+	visibility:hidden;
+	width:50px;
+	height:50px;
 }
 
-#PointPlayer2{
-	visibility: hidden;
-	width: 50px;
-	height: 50px;
-	margin-left: 625px;
+#Player2ScoreDiv {
+	position:absolute;
+	margin-left:750px;
+	padding-left:2px;
+	width:125px;
+	height:20px;
+	background-color:#895f02;
+	color:#ff0;
 }
 
-
-#FunctionButton{
-	margin-top: 1px;
-	visibility: visible;
-	cursor:pointer;	
-	width: 200px;
-	height: 75px;
+#PointPlayer2 {
+	visibility:hidden;
+	width:50px;
+	height:50px;
+	margin-left:625px;
 }
 
-#CardTable{
-	background-image: url('../images/cardtabletop.jpg');
-	background-color: #cccccc;
-	border-bottom-left-radius: 35%;
-	border-bottom-right-radius: 35%;
-	width: 80%;
-	height: 500px;
-	margin-right: 5%;
-	margin-left: 5%;
-	min-width: 1000px;
+#FunctionButton {
+	margin-top:1px;
+	visibility:visible;
+	cursor:pointer;
+	width:200px;
+	height:75px;
 }
 
-#CardBack{
-	width: 151px;
-	height: 212px;
-	float: left;
+#CardTable {
+	background-image:url(../images/cardtabletop.jpg);
+	background-color:#ccc;
+	border-bottom-left-radius:35%;
+	border-bottom-right-radius:35%;
+	width:80%;
+	height:500px;
+	margin-right:5%;
+	margin-left:5%;
+	min-width:1000px;
+}
+
+#CardBack {
+	width:151px;
+	height:212px;
+	float:left;
 	float:left;
 	padding-right:25px;
 }
 
-.CardsOnTable{
+.CardsOnTable {
 	position:absolute;
-	cursor:pointer;	
-	width: 151px;
-	height: 180px;
+	cursor:pointer;
+	width:151px;
+	height:180px;
 }
 
-#ControlsDiv{
-	position: absolute;
-	margin-top: 16%;
-	width: 100%;
-	visibility: hidden;
-}
-
-#ShufflePrompt{
-	margin-top: 30px;
-	color: yellow; 
-}
-
-#ShuffleArea{
-	position: absolute;
-	width: 220px;
-	margin-left: 440px;
-}
-
-.PlayersPick{
-	width: 220px;
-	height: 350px;
+#ControlsDiv {
+	position:absolute;
+	margin-top:16%;
+	width:100%;
 	visibility:hidden;
 }
 
-#Player1PickDiv{
-	position: absolute;
-	margin-left: 130px;
+#ShufflePrompt {
+	margin-top:30px;
+	color:#ff0;
 }
 
-#Player2PickDiv{
-	position: absolute;
-	margin-left: 740px;	
+#ShuffleArea {
+	position:absolute;
+	width:220px;
+	margin-left:440px;
 }
 
-#Player1Pick{
-	margin-top: 30px;
-	width: 151px;
-	height: 212px;	
+.PlayersPick {
+	width:220px;
+	height:350px;
+	visibility:hidden;
 }
 
-#Player2Pick{
-	margin-top: 30px;
-	width: 151px;
-	height: 212px;	
+#Player1PickDiv {
+	position:absolute;
+	margin-left:130px;
 }
 
-#Player1WinningHand{
-	position: absolute;
-	visibility: hidden;
-	margin-left: 15%;
+#Player2PickDiv {
+	position:absolute;
+	margin-left:740px;
 }
 
-#Player2WinningHand{
-	position: absolute;
-	visibility: hidden;
-	margin-left: 15%;
+#Player1Pick {
+	margin-top:30px;
+	width:151px;
+	height:212px;
 }
 
-.WinningHandImg{
-	width: 80px;
-	height: 45px;
+#Player2Pick {
+	margin-top:30px;
+	width:151px;
+	height:212px;
+}
+
+#Player1WinningHand {
+	position:absolute;
+	visibility:hidden;
+	margin-left:15%;
+}
+
+#Player2WinningHand {
+	position:absolute;
+	visibility:hidden;
+	margin-left:15%;
+}
+
+.WinningHandImg {
+	width:80px;
+	height:45px;
 }
