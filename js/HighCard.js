@@ -94,6 +94,7 @@ $('#CardBack').click(function() {
 				$("#CardTable").prepend(newCard);
 				leftPos = leftPos + 15;
 			}
+
 		}
 	};
 	$.ajax(options);
@@ -143,6 +144,8 @@ $('#MainWindow').on('click', '#FunctionButton', function() {
 	if ($('#FunctionButton').attr('src') === START_BUTTON_SRC) {
 		$('#FunctionButton').attr('src', NEXT_BUTTON_SRC);
 	}
+	$('#Player1Pick').attr('src', "/images/cardback.jpg");
+	$('#Player2Pick').attr('src', "/images/cardback.jpg");
 	$('#PointPlayer1').css('visibility', 'visible');
 	$('#ShuffleArea').css('visibility', 'visible');
 	$('#Player1WinningHand').css('visibility', 'hidden');
