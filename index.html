@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html >
 
 <html>
 <head>
@@ -14,9 +14,7 @@
 
 <body>
     <div id="MainWindow">
-        <center>
-            <h1>High Card</h1>
-        </center>
+        <h1 id="GameTitle" >High Card</h1>
 
         <div id="ScoreBoard">
         <div id="Player1ScoreDiv">
@@ -28,9 +26,8 @@
         </div><br>
         <img id="PointPlayer1" src="/images/Green_Arrow_Right.png" alt="Player 1"> <img id="PointPlayer2" src="/images/Green_Arrow_Right.png" alt="Player 2"></div><img id="TrophyPlayer1" src="/images/winnerTrophy.jpg" alt="Trophy for Player 1"> <img id="TrophyPlayer2" src="/images/winnerTrophy.jpg" alt="Trophy for Player 2">
 
-        <center>
-            <img id="FunctionButton" src="/images/button-startgame.jpg" alt="Start Game Button">
-        </center><br>
+        <img id="FunctionButton" src="/images/button-startgame.jpg" alt="Start Game Button">
+        <br>
 
         <div id="CardTable">
             <div id="ControlsDiv">
@@ -38,10 +35,13 @@
                 <img id="Player1Pick" src="/images/cardback.jpg" alt="Player one's Pick"></div>
 
                 <div id="ShuffleArea">
-                <div id="ShufflePrompt">
-                    Click to shuffle cards.
-                </div><br>
-                <img id="CardBack" src="/images/cardback.jpg" alt="Deck of Cards"></div>
+	                <div id="ShufflePrompt">
+	                    Click to shuffle cards.
+	                </div>
+	                <br>
+	                <img id="CardBack" src="/images/cardback.jpg" alt="Deck of Cards">
+	                <audio id="ShufflingCards" src="/audio/shuffling-cards-1.mp3" preload="auto" ></audio>
+				</div>
 
                 <div id="Player2PickDiv" class="PlayersPick"><img id="Player2WinningHand" class="WinningHandImg" src="/images/HighCardImage.jpg" alt="High Card"><br>
                 <img id="Player2Pick" src="/images/cardback.jpg" alt="Player two's Pick"></div>

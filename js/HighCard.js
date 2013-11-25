@@ -78,7 +78,7 @@ $('#CardBack').click(function() {
 		success: function(response) {
 			var cards = response.split('\n');
 			$('#ShuffleArea').css('visibility', 'hidden');
-			var topPos = 200;
+			var topPos = 220;
 			var leftPos = 115;
 			for (var i = 1; i < 53; i++) {
 				// Clone the 
@@ -97,6 +97,7 @@ $('#CardBack').click(function() {
 		}
 	};
 	$.ajax(options);
+	document.getElementById('ShufflingCards').play();
 });
 $('#CardTable').on('click', '.CardsOnTable', function() {
 	var cardIndex = parseInt($(this).attr('id').slice(4), 10);
@@ -116,11 +117,11 @@ $('#CardTable').on('click', '.CardsOnTable', function() {
 		if (playerCardVal[0] > playerCardVal[1]) {
 			playerScore[0] += playerCardVal[0];
 			$('#Player1WinningHand').css('visibility', 'visible');
-			$(Player1Score).html(playerScore[0].toString());
+			$('#Player1Score').html(playerScore[0].toString());
 		} else if (playerCardVal[0] < playerCardVal[1]) {
 			playerScore[1] += playerCardVal[1];
 			$('#Player2WinningHand').css('visibility', 'visible');
-			$(Player2Score).html(playerScore[1].toString());
+			$('#Player2Score').html(playerScore[1].toString());
 		} else {
 			// Do nothing
 		}
@@ -138,9 +139,9 @@ $('#CardTable').on('click', '.CardsOnTable', function() {
 	$('.CardsOnTable').remove();
 });
 $('#MainWindow').on('click', '#FunctionButton', function() {
+	$('#FunctionButton').css('visibility', 'hidden');
 	if ($('#FunctionButton').attr('src') === START_BUTTON_SRC) {
 		$('#FunctionButton').attr('src', NEXT_BUTTON_SRC);
-		$('#FunctionButton').css('visibility', 'hidden');
 	}
 	$('#PointPlayer1').css('visibility', 'visible');
 	$('#ShuffleArea').css('visibility', 'visible');

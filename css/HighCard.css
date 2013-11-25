@@ -1,3 +1,7 @@
+#GameTitle{
+	text-align: center;
+}
+
 #TrophyPlayer1 {
 	width:181px;
 	height:104px;
@@ -54,6 +58,9 @@
 }
 
 #FunctionButton {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 	margin-top:1px;
 	visibility:visible;
 	cursor:pointer;
