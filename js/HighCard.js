@@ -78,7 +78,7 @@ $('#CardBack').click(function() {
 		success: function(response) {
 			var cards = response.split('\n');
 			$('#ShuffleArea').css('visibility', 'hidden');
-			var topPos = 255;
+			var topPos = 200;
 			var leftPos = 115;
 			for (var i = 1; i < 53; i++) {
 				// Clone the 
