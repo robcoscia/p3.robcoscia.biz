@@ -70,6 +70,8 @@ function GetAltText(cardId) {
 	return cardImages[cardId][2];
 } /*   Event Handlers   */
 $('#CardBack').click(function() {
+	document.getElementById('ShufflingCards').play();
+
 	var options = {
 		type: 'get',
 		url: 'http://www.random.org/sequences/?min=1&max=52&col=1&format=plain&rnd=new',
@@ -98,7 +100,6 @@ $('#CardBack').click(function() {
 		}
 	};
 	$.ajax(options);
-	document.getElementById('ShufflingCards').play();
 });
 $('#CardTable').on('click', '.CardsOnTable', function() {
 	var cardIndex = parseInt($(this).attr('id').slice(4), 10);
@@ -126,13 +127,16 @@ $('#CardTable').on('click', '.CardsOnTable', function() {
 		} else {
 			// Do nothing
 		}
-		if (playerScore[0] >= 100) {
-			$('#TrophyPlayer1').css('display', 'block');
+		if (playerScore[0] >= 100 || playerScore[1] >= 100) {
+			if (playerScore[0] >= 100) {
+				$('#TrophyPlayer1').css('display', 'block');
+			} else {
+				$('#TrophyPlayer2').css('display', 'block');
+			}
 			$('#FunctionButton').attr('src', START_BUTTON_SRC);
-		} else if (playerScore[1] >= 100) {
-			$('#TrophyPlayer2').css('display', 'block');
-			$('#FunctionButton').attr('src', START_BUTTON_SRC);
+			document.getElementById('TaDa').play();
 		}
+
 		$('#ShuffleArea').css('visibility', 'hidden');
 		$('#PointPlayer2').css('visibility', 'hidden');
 		$('#FunctionButton').css('visibility', 'visible');
