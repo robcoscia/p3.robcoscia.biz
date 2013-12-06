@@ -1,3 +1,5 @@
+
+// Global variables
 var cardPositions = new Array(53);
 var cardImages = new Array(53);
 cardImages[1] = ["2c.png", "2", "Two of Clubs"];
@@ -68,10 +70,13 @@ function GetCardImageNm(cardId) {
 
 function GetAltText(cardId) {
 	return cardImages[cardId][2];
-} /*   Event Handlers   */
+} 
+
+/*   Event Handlers   */
 $('#CardBack').click(function() {
 	document.getElementById('ShufflingCards').play();
 
+	// Set AJAX call options
 	var options = {
 		type: 'get',
 		url: 'http://www.random.org/sequences/?min=1&max=52&col=1&format=plain&rnd=new',
@@ -82,13 +87,14 @@ $('#CardBack').click(function() {
 			$('#ShuffleArea').css('visibility', 'hidden');
 			var topPos = 220;
 			var leftPos = 115;
+			// iterate through each card
 			for (var i = 1; i < 53; i++) {
-				// Clone the 
+				// Clone the card back
 				var newCard = $('#CardBack').clone();
 				var id = "card" + cards[i - 1];
 				newCard.attr("id", id);
 				newCard.attr('alt', 'Card ' + i.toString());
-				// A class so we can position cards on the table on the
+				// A class so we can position cards on the table 
 				newCard.addClass("CardsOnTable");
 				newCard.css('top', topPos.toString() + "px");
 				newCard.css('left', leftPos.toString() + "px");
@@ -99,27 +105,44 @@ $('#CardBack').click(function() {
 
 		}
 	};
+	
+	// Make AJAX Call
 	$.ajax(options);
 });
+
 $('#CardTable').on('click', '.CardsOnTable', function() {
+	
+	// Extract the card index from ID
 	var cardIndex = parseInt($(this).attr('id').slice(4), 10);
+	
+	// Get card value
 	playerCardVal[playerIndex] = GetCardValue(cardIndex);
+	
+	// Player 1 turn
 	if (playerIndex === 0) {
 		$('#ShuffleArea').css('visibility', 'visible');
+		// Set card image for player 1
 		$('#Player1Pick').attr('src', "/images/" + GetCardImageNm(cardIndex));
+		// Set alt image text player 1
 		$('#Player1Pick').attr('alt', GetAltText(cardIndex));
 		$('#Player1Pick').css('visibility', 'visible');
 		$('#PointPlayer1').css('visibility', 'hidden');
 		$('#PointPlayer2').css('visibility', 'visible');
 		playerIndex = 1;
+	// player 2 turn	
 	} else {
+		// Set card image for player 2
 		$('#Player2Pick').attr('src', "/images/" + GetCardImageNm(cardIndex));
+		// Set alt image text for player 2
 		$('#Player2Pick').attr('alt', GetAltText(cardIndex));
 		$('#Player2Pick').css('visibility', 'visible');
+		
+		// player 1 has highest card
 		if (playerCardVal[0] > playerCardVal[1]) {
 			playerScore[0] += playerCardVal[0];
 			$('#Player1WinningHand').css('visibility', 'visible');
 			$('#Player1Score').html(playerScore[0].toString());
+		// player 2 has highest card
 		} else if (playerCardVal[0] < playerCardVal[1]) {
 			playerScore[1] += playerCardVal[1];
 			$('#Player2WinningHand').css('visibility', 'visible');
@@ -127,9 +150,14 @@ $('#CardTable').on('click', '.CardsOnTable', function() {
 		} else {
 			// Do nothing
 		}
+		
+		// Game is over
 		if (playerScore[0] >= 100 || playerScore[1] >= 100) {
+			
+			// player 1 is winner
 			if (playerScore[0] >= 100) {
 				$('#TrophyPlayer1').css('display', 'block');
+			// player 2 is winner
 			} else {
 				$('#TrophyPlayer2').css('display', 'block');
 			}
@@ -143,13 +171,19 @@ $('#CardTable').on('click', '.CardsOnTable', function() {
 	}
 	$('.CardsOnTable').remove();
 });
+
 $('#MainWindow').on('click', '#FunctionButton', function() {
+	// hide fuction button
 	$('#FunctionButton').css('visibility', 'hidden');
+	
+	// Transition the function bar from start game to next hand 
 	if ($('#FunctionButton').attr('src') === START_BUTTON_SRC) {
 		$('#FunctionButton').attr('src', NEXT_BUTTON_SRC);
 	}
+	// set players pick to card back to make any delay of displaying pick look realistic
 	$('#Player1Pick').attr('src', "/images/cardback.jpg");
 	$('#Player2Pick').attr('src', "/images/cardback.jpg");
+	
 	$('#PointPlayer1').css('visibility', 'visible');
 	$('#ShuffleArea').css('visibility', 'visible');
 	$('#Player1WinningHand').css('visibility', 'hidden');

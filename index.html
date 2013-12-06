@@ -1,53 +1,60 @@
 <!DOCTYPE html >
 
 <html>
-<head>
-    <title>High Card</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="/css/Main.css">
-    <link rel="stylesheet" type="text/css" href="/css/HighCard.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript">
-</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript">
-</script>
-</head>
-
-<body>
-    <div id="MainWindow">
-        <h1 id="GameTitle" >High Card</h1>
-		<audio id="TaDa" src="/audio/tada.wav" preload="auto" ></audio>
-        <div id="ScoreBoard">
-        <div id="Player1ScoreDiv">
-            <label>Player 1:</label> <span id="Player1Score">0</span>
-        </div>
-
-        <div id="Player2ScoreDiv">
-            <label>Player 2:</label> <span id="Player2Score">0</span>
-        </div><br>
-        <img id="PointPlayer1" src="/images/Green_Arrow_Right.png" alt="Player 1"> <img id="PointPlayer2" src="/images/Green_Arrow_Right.png" alt="Player 2"></div><img id="TrophyPlayer1" src="/images/winnerTrophy.jpg" alt="Trophy for Player 1"> <img id="TrophyPlayer2" src="/images/winnerTrophy.jpg" alt="Trophy for Player 2">
-
-        <img id="FunctionButton" src="/images/button-startgame.jpg" alt="Start Game Button">
-        <br>
-
-        <div id="CardTable">
-            <div id="ControlsDiv">
-                <div id="Player1PickDiv" class="PlayersPick"><img id="Player1WinningHand" class="WinningHandImg" src="/images/HighCardImage.jpg" alt="High Card"><br>
-                <img id="Player1Pick" src="/images/cardback.jpg" alt="Player one's Pick"></div>
-
-                <div id="ShuffleArea">
-	                <div id="ShufflePrompt">
-	                    Click to shuffle cards.
-	                </div>
-	                <br>
-	                <img id="CardBack" src="/images/cardback.jpg" alt="Deck of Cards">
-	                <audio id="ShufflingCards" src="/audio/shuffling-cards-1.mp3" preload="auto" ></audio>
-				</div>
-
-                <div id="Player2PickDiv" class="PlayersPick"><img id="Player2WinningHand" class="WinningHandImg" src="/images/HighCardImage.jpg" alt="High Card"><br>
-                <img id="Player2Pick" src="/images/cardback.jpg" alt="Player two's Pick"></div>
-            </div>
-        </div><br>
-    </div><script src="/js/HighCard.js" type="text/javascript">
-</script>
-</body>
+	<head>
+	    <title>High Card</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <link rel="stylesheet" type="text/css" href="/css/Main.css">
+	    <link rel="stylesheet" type="text/css" href="/css/HighCard.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+	</head>
+	
+	<body>
+	    <div id="MainWindow">
+	        <h1 id="GameTitle" >High Card</h1>
+			<audio id="TaDa" src="/audio/tada.wav" preload="auto" ></audio>
+	        <div id="ScoreBoard">
+		        <div id="Player1ScoreDiv">
+		            <label>Player 1:</label> <span id="Player1Score">0</span>
+		        </div>
+		        <div id="Player2ScoreDiv">
+		            <label>Player 2:</label> <span id="Player2Score">0</span>
+		        </div>
+		        <br>
+		        <img id="PointPlayer1" src="/images/Green_Arrow_Right.png" alt="Player 1"> 
+		        <img id="PointPlayer2" src="/images/Green_Arrow_Right.png" alt="Player 2">
+			</div>
+	        <img id="TrophyPlayer1" src="/images/winnerTrophy.jpg" alt="Trophy for Player 1"> 
+	        <img id="TrophyPlayer2" src="/images/winnerTrophy.jpg" alt="Trophy for Player 2">
+	
+	        <img id="FunctionButton" src="/images/button-startgame.jpg" alt="Start Game Button">
+	        <br>
+	
+	        <div id="CardTable">
+	            <div id="ControlsDiv">
+	                <div id="Player1PickDiv" class="PlayersPick">
+		                <img id="Player1WinningHand" class="WinningHandImg" src="/images/HighCardImage.jpg" alt="High Card"><br>
+		                <img id="Player1Pick" src="/images/cardback.jpg" alt="Player one's Pick">
+					</div>
+	
+	                <div id="ShuffleArea">
+		                <div id="ShufflePrompt">
+		                    Click to shuffle cards.
+		                </div>
+		                <br>
+		                <img id="CardBack" src="/images/cardback.jpg" alt="Deck of Cards">
+		                <audio id="ShufflingCards" src="/audio/shuffling-cards-1.mp3" preload="auto" ></audio>
+					</div>
+	
+	                <div id="Player2PickDiv" class="PlayersPick">
+		                <img id="Player2WinningHand" class="WinningHandImg" src="/images/HighCardImage.jpg" alt="High Card"><br>
+		                <img id="Player2Pick" src="/images/cardback.jpg" alt="Player two's Pick">
+					</div>
+	            </div>
+	        </div>
+	        <br>
+	    </div>
+	    <script src="/js/HighCard.js" type="text/javascript"></script>
+	</body>
 </html>
